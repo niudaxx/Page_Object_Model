@@ -1,0 +1,2 @@
+[2021-03-11 09:45:17,914] [log.py|console] [line:54] ERROR   : 邮件发送失败-->(535, b'Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256')
+[2021-03-11 09:46:01,088] [log.py|console] [line:54] ERROR   : 邮件发送失败-->(535, b'Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256')
