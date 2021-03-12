@@ -2,4 +2,30 @@ testinfo:
         - id: login001
           title: 登陆
           info: 登陆页面
+elementParam:
+        - element_info: userName
+          find_type: id
+          operate_type: send_keys
+          info: 用户名
+        - element_info: password
+          find_type: id
+          operate_type: send_keys
+          info: 密码
+        - element_info: companyId
+          find_type: id
+          operate_type: select
+          info: 厂区
+        - element_info: departmentId
+          find_type: id
+          operate_type: select
+          info: 部门
+        - element_info: submit
+          find_type: id
+          operate_type: click
+          info: 登陆
+check:
+        - element_info: /html/body/div/div/div[4]/div[2]
+          find_type: xpath
+          info: 用户名密码不一致或用户名不存在。
+
 

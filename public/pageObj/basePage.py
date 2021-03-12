@@ -3,7 +3,7 @@ import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+from selenium.webdriver.support.ui import Select
 from config import setting
 import configparser
 
@@ -52,8 +52,9 @@ class base_page():
             log.error('未找到页面元素集合%s' % loc)
 
     # 文本框输入
-    def send_key(self, element, keys, clear_input=True):
+    def send_key(self, loc, keys, clear_input=True):
         try:
+            element = self.find_element(loc)
             if clear_input:
                 element.clear()
             element.send_keys(keys)
@@ -61,8 +62,9 @@ class base_page():
             log.error('输入文件失败----->%s' % ex)
 
     # 点击元素
-    def onclick(self, element):
+    def onclick(self, loc):
         try:
+            element = self.find_element(loc)
             element.click()
         except Exception as ex:
             log.error('元素点击失败----->%s' % ex)
@@ -87,3 +89,16 @@ class base_page():
             return self.driver.switch_to_alert(loc)
         except Exception as ex:
             log.error('未找到alert------>%' % ex)
+
+    # 下拉框选择
+    def element_selected(self,loc,val,sel_type = 'index'):
+        try:
+            element = Select(self.find_element(loc))
+            if sel_type.__eq__('index'):
+                element.select_by_index(val)
+            elif sel_type.__eq__('value'):
+                element.select_by_value(val)
+            else:
+                element.select_by_visible_text(val)
+        except Exception as ex:
+            log.error('未找到下拉框------>%' % ex)
