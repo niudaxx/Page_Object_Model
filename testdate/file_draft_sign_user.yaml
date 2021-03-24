@@ -1,0 +1,32 @@
+# 文件申请流程参与人
+sign_user_info:
+        - title: 文件申请
+          info: 文件申请流程操作人
+Creater:
+        - userId:
+          userName:
+          compId:
+          deptId:
+          doWorkflow:
+          info: 创建组
+DeptFileMgr:
+        - userId:
+          userName:
+          compId:
+          deptId:
+          doWorkflow:
+          info: 部门文件协调员
+DeptApp:
+        - userId:
+          userName:
+          compId:
+          deptId:
+          doWorkflow:
+          info: 部门负责人
+QAApp:
+        - userId:
+          userName:
+          compId:
+          deptId:
+          doWorkflow:
+          info: 质量保证部经理
