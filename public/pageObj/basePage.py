@@ -24,7 +24,7 @@ class base_page():
 
     def __init__(self, webderver, base_url=login_url, parent=None):
         self.driver = webderver
-        #self.driver = webdriver.Chrome();
+        # self.driver = webdriver.Chrome();
         self.base_url = base_url
         self.timeout = 10
         self.parent = parent
@@ -84,14 +84,14 @@ class base_page():
             log.error('未找到子窗口------>%s' % ex)
 
     # alert弹出框
-    def switch_alert(self,loc):
+    def switch_alert(self, loc):
         try:
             return self.driver.switch_to_alert(loc)
         except Exception as ex:
             log.error('未找到alert------>%' % ex)
 
     # 下拉框选择
-    def element_selected(self,loc,val,sel_type = 'index'):
+    def element_selected(self, loc, val, sel_type='index'):
         try:
             element = Select(self.find_element(loc))
             if sel_type.__eq__('index'):
