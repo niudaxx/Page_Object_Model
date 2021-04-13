@@ -21,3 +21,5 @@ SCREENSHOT_DIR = os.path.join(REPORT_DIR, 'screenshot')
 TESTDATE_DIR = os.path.join(BASE_DIR, 'testdate')
 # 页面元素数据
 ELEMENT_DIR = os.path.join(BASE_DIR, 'elementdate')
+# requests相关
+REQUESTS_DIR = os.path.join(BASE_DIR,'requestsCase')

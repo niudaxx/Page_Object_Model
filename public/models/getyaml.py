@@ -59,3 +59,18 @@ class getYaml():
     def get_check_info(self,index):
         data = self.get_yaml_data()
         return data['check'][index]['info']
+
+
+    #-------------request-----------
+
+    def get_requestsParam_url(self,index):
+        data = self.get_yaml_data()
+        return data['requestsParam'][index]['url']
+
+    def get_requestsParam_type(self,index):
+        data = self.get_yaml_data()
+        return data['requestsParam'][index]['type']
+
+    def get_requestsParam_data(self, index):
+        data = self.get_yaml_data()
+        return data['requestsParam'][index]['data']

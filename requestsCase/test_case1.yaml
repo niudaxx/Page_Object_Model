@@ -1,0 +1,17 @@
+requestsParam:
+  - info: 检索记录文件是否存在
+    url: http://localhost:8080/sisqp-web/dms-fd/fd-ajax.action?method=checkSrcFileCode
+    type: post
+    data: {'srcFileCode':'srcFileCode'}
+    result: type：json,key：hasFile,value:N|Y
+  - info: DMS待处理列表
+    url: http://localhost:8080/sisqp-web/dms-index/index.action
+    type: get
+    data: {}
+    result: type:html
+  - info: DMS待生效列表
+    url: http://localhost:8080/sisqp-web/dms-filewf/listToWF.action?dto.validStatus=0&dto.status=7&wfNamespace=dms-fe
+    type: get
+    data: {}
+    result: type:html
+

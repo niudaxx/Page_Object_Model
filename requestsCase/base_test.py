@@ -5,6 +5,9 @@
 
 import unittest,os
 import requests
+from public.models.log import Log
+
+log = Log()
 
 class BaseTest(unittest.TestCase):
 
@@ -27,6 +30,17 @@ class BaseTest(unittest.TestCase):
     def setUp(self) -> None:
         pass
 
+
+    def case_method(self,url,data,req_type,headers=None,cookie=None):
+        result = ''
+        try:
+            if req_type=='post':
+                result = self.session.post(url=url,data=data,headers=headers,cookies=cookie)
+            elif req_type=='get':
+                result = self.session.get(url=url,data=data,headers=headers,cookies=cookie)
+        except Exception as e:
+            log.error('接口调用失败----------->{0}'.format(e))
+        return result
 
 if __name__ == '__main__':
     # 测试用例路径
