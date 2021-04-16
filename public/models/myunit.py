@@ -10,7 +10,7 @@ class my_unit(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.driver = brower()
         # 隐式等待
-        cls.driver.implicitly_wait(10)
+        # cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
 
     # 类执行完后执行

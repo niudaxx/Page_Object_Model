@@ -1,0 +1,8 @@
+[2021-04-14 14:03:49,161] [log.py|console] [line:54] ERROR   : webdriver获取异常---->Message: session not created: This version of ChromeDriver only supports Chrome version 84
+
+[2021-04-14 14:03:49,726] [remote_connection.py|_request] [line:474] DEBUG   : POST http://127.0.0.1:59068/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}
+[2021-04-14 14:03:50,653] [remote_connection.py|_request] [line:561] DEBUG   : Finished Request
+[2021-04-14 14:03:52,661] [log.py|console] [line:54] ERROR   : webdriver获取异常---->Message: session not created: This version of ChromeDriver only supports Chrome version 84
+
+[2021-04-14 14:03:52,661] [log.py|console] [line:54] ERROR   : webdriver获取异常---->Message: session not created: This version of ChromeDriver only supports Chrome version 84
+
